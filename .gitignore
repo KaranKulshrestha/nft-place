@@ -38,5 +38,8 @@ coverage.json
 typechain
 typechain-types
 
+#hardhat
+artifacts
+cache
 
 
