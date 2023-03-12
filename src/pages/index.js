@@ -17,7 +17,7 @@ export default function Home() {
   }, [])
 
   async function loadNFTs() {
-    const provider = new ethers.providers.JsonRpcProvider()
+    const provider = new ethers.providers.JsonRpcProvider('https://polygon-mumbai.g.alchemy.com/v2/ysNiaflQRIxmbDEY06sdesZVitDVlm6r')
     const nftContract = new ethers.Contract(nftmarketaddress, NFTMarketplace.abi, provider)
     const data = await nftContract.fetchMarketItems()
     const items = await Promise.all(data.map(async i => {
